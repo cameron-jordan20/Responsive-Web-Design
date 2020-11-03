@@ -1,0 +1,124 @@
+.nav-bar {
+  background-color: #45484A;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.nav-bar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  width: 50%;
+  margin: 20px 0 20px;
+}
+
+.nav-bar a:hover {
+  background-color: #2A252E;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-bar {
+    position: fixed;
+    float: left;
+  }
+}
+
+.contact-bar {
+  background-color: #45484A;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.contact-bar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  width: 25%;
+}
+
+.contact-bar a:hover {
+  background-color: #2A252E;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .contact-bar {
+    position: fixed;
+    float: right;
+  }
+}
+
+a[href*="github.com/"] {
+  background:url(https://github.com/favicon.ico) no-repeat left center;
+  padding: 20px 0px 20px;
+  text-decoration: none;
+  color: black;
+}
+
+a[href*="instagram.com/"] {
+  background:url(https://instagram.com/favicon.ico) no-repeat left center;
+  padding: 20px 0px 20px;
+  text-decoration: none;
+  color: black;
+}
+
+a[href*="twitter.com/"] {
+  background:url(https://twitter.com/favicon.ico) no-repeat left center;
+  padding: 20px 0px 20px;
+  text-decoration: none;
+  color: black;
+}
+
+a[href*="reddit.com/"] {
+  background:url(https://reddit.com/favicon.ico) no-repeat left center;
+  padding: 20px 0px 20px;
+  text-decoration: none;
+  color: black;
+}
+
+h2 {
+  text-align: center;
+  font-family: Anton;
+  font-size: 25px;
+}
+
+.pt1 {
+  grid-area: left;
+}
+
+.pt2 {
+  grid-area: right;
+}
+
+.projects {
+  /*background-color: #C19E6B;*/
+  margin: 20px 20px 60px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 200px 200px;
+  grid-template-areas:
+    "left right";
+}
+
+.welcome-section {
+  height: 100%;
+  padding-top: 50px;
+  margin-top: 50px;
+  display: block;
+  height: 100vh;
+  background-color: #FAE7B1;
+}

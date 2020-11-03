@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML5 - The Syntax</title>
+
+    <link rel="stylesheet" href="format.css" media="screen" />
+
+  </head>
+  <body>
+    <main id="main-doc">
+      <nav id="navbar">
+        <header>HTML5 Syntax</header>
+        <a href="#DOCTYPE_Declaration" class="nav-link">
+          DOCTYPE Declaration
+        </a>
+        <a href="#Elements" class="nav-link">
+            Elements
+        </a>
+        <a href="#Attributes" class="nav-link">
+            Attributes
+        </a>
+        <a href="#Comments" class="nav-link">
+            Comments
+        </a>
+        <a href="#Text" class="nav-link">
+            Text
+        </a>
+        <a href="#CDATA_Sections" class="nav-link">
+            CDATA Sections
+        </a>
+        <a href="#Character_References" class="nav-link">
+            Character References
+        </a>
+      </nav>
+
+      <section class="main-section" id="DOCTYPE_Declaration">
+        <header>DOCTYPE Declaration</header>
+        <p>
+          The Document Type Declaration needs to be present at the beginning of a document that uses
+          the HTML syntax. It may optionally be used within the XHTML syntax, but it is not required.
+          The following DOCTYPE is strongly recommended for most HTML documents:
+        </p>
+        <p>
+          Example:
+          The HTML5 DOCTYPE declaration.
+          <code><!DOCTYPE html></code>
+        </p>
+      </section>
+
+      <section class="main-section" id="Elements">
+        <header>Elements</header>
+        <p>
+          There are five different kinds of elements: normal, void, raw text, RCDATA and foreign elements.
+          Each is represented syntactically by a tag. While the types have some similarities to each other,
+          they are distinguished by their syntactic requirements for their content models and the types of tags
+          that may be used.
+        </p>
+        <div class="sub-section" id="Tags">
+          <h2>Tags</h2>
+          <p>
+            All elements are identified by their tag name and are marked up using either start tags and end
+            tags or self-closing tags. A start tag marks the beginning of an element, while an end tag marks
+            the end. Start tags are delimited using angle brackets with the tag name and any attributes in
+            between. End tags are delimited by angle brackets with a slash before the tag name.
+          </p>
+        </section>
+        <div class="sub-section" id="Void_Elements">
+          <h2>Void Elements</h2>
+          <p>
+            The term void elements is used to designate elements that must be empty.
+            These requirements only apply to the HTML syntax. In XHTML, all such elements are
+            treated as normal elements, but must be marked up as empty elements.
+          </p>
+          <p>
+            These elements are forbidden from containing any content at all. In HTML, these elements
+            have a start tag only. The self-closing tag syntax may be used. The end tag must be omitted
+            because the element is automatically closed by the parser.
+          </p>
+        </div>
+        <div class="sub-section" id="Raw_Text_Elements">
+          <h2>Raw Text Elements</h2>
+          <p>
+            The term raw text elements refers to elements within which the content is treated as raw text
+            instead of markup. These requirements only apply to the HTML syntax. In XHTML, all such elements
+            are treated as normal elements.
+          </p>
+          <p>
+            These require a start tag and an end tag. Neither the self-closing tag syntax, nor optional tags
+            are supported.
+          </p>
+          <p>
+            These elements can only contain raw text. This means that other content like comments, character
+            references and other elements cannot be represented in the HTML syntax. That is, the markup for such
+            constructs is treated as text instead of markup. All occurrences of special characters do not need
+            to be escaped as character references, as they otherwise would within normal elements.
+          </p>
+        </div>
+        <div class="sub-section" id="RCDATA_Elements">
+          <h2>RCDATA Elements</h2>
+          <p>
+            The term RCDATA elements refers to elements within which character references are supported,
+            but all other content is treated as raw text instead of markup. These requirements only apply to
+            the HTML syntax. In XHTML, all such elements are treated as normal elements.
+          </p>
+          <p>
+            These require a start tag and an end tag. Neither the self-closing tag syntax, nor optional tags
+            are supported.
+          </p>
+          <p>
+            These elements can only contain text or character references. This means that only character
+            references are treated as markup, whereas all other content like comments and other elements
+            cannot be represented in the HTML syntax. That is, the markup for such constructs is treated as text.
+          </p>
+          <p>
+            Occurrences of special characters may, but generally do not need to be escaped as character
+            references, as they otherwise would within normal elements. But this is subject to the additional
+            restriction that the text cannot include an ambiguous ampersand. That is, an ampersand followed a sequence
+            of characters that looks like a named character reference, but which is not valid.
+          </p>
+        </div>
+        <div class="sub-section" id="Foreign_Elements">
+          <h2>Foreign Elements</h2>
+          <p>
+            The term foreign elements refers to elements that are in the SVG and MathML namespaces.
+          </p>
+          <p>
+            These require a start tag and an end tag. The self-closing tag syntax may be used, where the
+            element's content model permits. Optional tags are not supported.
+          </p>
+          <p>
+            These elements can contain text, character references, CDATA sections, other elements, and
+            comments, but the text must not contain the less-than sign character (<) or an ambiguous ampersand.
+          </p>
+        </div>
+        <div class="sub-section" id="Normal_Elements">
+          <h2>Normal Elements</h2>
+          <p>
+            Normal Elements refers to all other HTML elements that are not categorised in any of the other types.
+          </p>
+          <p>
+            These have a start tag and an end tag. These elements do not support the self-closing tag syntax.
+            Certain elements have optional tags, meaning that one or both tags may be omitted in specific
+            circumstances where the presence of the tag will be implied by surrounding markup. Consult the
+            element definitions to see which tags may be omitted.
+          </p>
+          <p>
+            Normal elements can contain text, character references, other elements, and comments, but the text
+            must not contain the less-than sign character (<) or an ambiguous ampersand. Some additional
+            restrictions apply on a per-element basis to some specific elements. Consult the element definitions
+            for details.
+          </p>
+        </div>
+      </div>
+
+      <section class="main-section" id="Attributes">
+        <header>Attributes</header>
+        <p>
+          Elements may have attributes that are used to specify additional information about them.
+          Some attributes are defined globally and can be used on any HTML element, while others are defined
+          for specific elements only. Every attribute must have an attribute name that is used to identify it.
+          Every attribute also has an associated attribute value, which, depending on the attribute's definition,
+          may represent one of several different types. The permitted syntax for each attribute depends on the given
+          value.
+        </p>
+        <p>
+          A typical attribute in HTML has a name and a value separated by an equals sign (=). Attributes are
+          placed within a start tag and are separated from the tag name and from each other by whitespace.
+          They must not be specified within an end tag.
+        </p>
+        <h3>Example:</h3>
+        <p>
+          The syntax of two typical attributes.
+          <code><div class="example" lang="en">...</div></code>
+        </p>
+        <h3>Example Error:</h3>
+        <p>
+          Attributes cannot be placed within end tags.
+          <code><section id="example">...</section id="example"></code>
+        </p>
+        <div class="sub-section" id="Empty_Attribute_Syntax">
+          <h2>Empty Attribute Syntax</h2>
+          <p>
+            An empty attribute is one where the value has been omitted. This is a syntactic shorthand for
+            specifying the attribute with an empty value, and is commonly used for boolean attributes. This
+            syntax may be used in the HTML syntax, but not in the XHTML syntax.
+          </p>
+          <h3>HTML Example:</h3>
+          <p>
+            Empty attributes may have their value omitted in the HTML syntax.
+            <code><input disabled>...</code>
+          </p>
+        </div>
+        <div class="sub-section" id="Unquoted_Attribute_Value_Syntax">
+          <h2>Unquoted Attribute Value Syntax</h2>
+          <p>
+            An unquoted attribute value is one where the value is supplied, but is not surrounded by
+            quotation marks. This syntax may be used in the HTML syntax, but not in the XHTML syntax.
+          </p>
+          <p>
+            The attribute value must not contain any literal space characters, any of the characters:
+            double quote ("), apostrophe ('), equals sign (=), less-than sign (<), greater-than sign (>),
+            or grave accent (`), and the value must not be the empty string. To represent those characters in an
+            attribute value, they either need to be escaped using character references, or you need to use either
+            the single- or double-quoted attribute values.
+          </p>
+          <h3>HTML Example:</h3>
+          <p>
+            Some attribute values may be left unquoted in the HTML syntax.
+            <code><img src=example.png height=200 width=300/></code>
+          </p>
+        </div>
+        <div class="sub-section" id="Double-Quoted_Attribute_Value_Syntax">
+          <h2>Double-Quoted Attribute Value Syntax</h2>
+          <p>
+            An double-quoted attribute value is one where the supplied value is surrounded by double quotation
+            marks ("). This syntax may be used in both HTML and XHTML.
+          </p>
+          <p>
+            The attribute value must delimited by double-quote characters (") before and after the value,
+            and must not contain any double-quote characters or an ambiguous ampersands in between. All other
+            text and character references are permitted.
+          </p>
+          <p>
+            The advantage of quoting attributes, the value may contain the additional characters that can’t
+            be used in unquoted attribute values. To include a double-quote character within the value, either
+            use a character reference (&quot;), or use a single-quoted attribute value instead.
+          </p>
+          <h3>Example:</h3>
+          <p>
+            Attribute values may be quoted with double quote marks.
+            <code><img src="example.jpg" title="An example photograph"></code>
+          </p>
+        </div>
+        <div class="sub-section" id="Single-Quoted_Attribute_Value_Syntax">
+          <h2>Single-Quoted Attribute Value Syntax</h2>
+          <p>
+            An single-quoted attribute value is one where the supplied value is surrounded by single quotation
+            marks ('). This syntax may be used in both HTML and XHTML.
+          </p>
+          <p>
+            The attribute value must delimited by single-quote characters (') before and after the value, and
+            must not contain any single-quote characters or an ambiguous ampersands in between. All other text
+            and character references are permitted.
+          </p>
+          <p>
+            The advantage of quoting attributes, the value may contain the additional characters that can’t
+            be used in unquoted attribute values. To include a single-quote (or apostrophe) character within
+            the value, either use a character reference (&apos;), or use a double-quoted attribute value instead.
+          </p>
+          <h3>Example:</h3>
+          <p>
+            Attribute values may be quoted with single quote marks.
+            <code><img src='example.jpg' title='An example photograph'></code>
+          </p>
+        </div>
+        <div class="sub-section" id="HTML_and_XHTML_Comparison">
+          <h2>HTML and XHTML Comparison</h2>
+            <table>
+              <tr>
+                <td>
+                  <ul>
+                    <li><b>Attribute Names</b></li>
+                    <li><b>Namespace</b></li>
+                    <li><b>Empty attributes</b></li>
+                    <li><b>Unquoted attributes</b></li>
+                    <li><b>Double quoted attributes</b></li>
+                    <li><b>Single quoted attributes</b></li>
+                    <li><b>Line feeds in attribute values</b></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Case-insensitive</li>
+                    <li>Prefixes for Attribute Names	Limited, specified prefixes only</li>
+                    <li>Allowed</li>
+                    <li>Allowed</li>
+                    <li>Allowed</li>
+                    <li>Allowed</li>
+                    <li>Allowed</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Case-sensitive</li>
+                   	<li>Allowed</li>
+                  	<li>Forbidden</li>
+                    <li>Forbidden</li>
+                    <li>Allowed</li>
+                    <li>Allowed</li>
+                  	<li>Normalised to spaces</li>
+                  </ul>
+                </td>
+              </tr>
+
+            </table>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="main-section" id="Comments">
+        <header>Comments</header>
+      </section>
+
+      <section class="main-section" id="Text">
+        <header>Text</header>
+      </section>
+
+      <section class="main-section" id="CDATA_Sections">
+        <header>CDATA Sections</header>
+      </section>
+
+      <section class="main-section" id="Character_References">
+        <header>Character References</header>
+      </div>
+    </section>
+  </main>
+</html>
+
+<!-- credit to W3C for HTML5 documentation -->

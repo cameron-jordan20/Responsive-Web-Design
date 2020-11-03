@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Product Landing Page</title>
+
+    <link rel="stylesheet" href="..//style/format.css" media="screen">
+    <link rel="stylesheet" href="..//style/checkoutformat.css" media="screen">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script type="text/javascript" src="..//script/script.js"></script>
+
+  </head>
+  <body>
+    <header id="header" class="header">
+      <div class="headimg"></div>
+
+      <img id="header-img" class="headerimg" src="..//images/headerimg.jpg" alt="header-img">
+
+      <nav id="nav-bar" class="nav-bar">
+        <a href="#t-shirts" class="nav-link">T-Shirts</a>
+        <a href="#sweatshirts" class="nav-link">Sweatshirts</a>
+        <a href="#varisty-jackets"class="nav-link">Varsity-Jackets</a>
+        <a type="submit" onclick="openform()" class="btn_open" class="nav-link"><i class="material-icons">card_travel</i></a>
+      </nav>
+    </header>
+
+    <p align="center"><iframe id="video" src="https://www.youtube.com/embed/3wgUBLO1mwc" width="width" height="height"></iframe></p>
+
+    <div class="container">
+
+      <div id="t-shirts" class="item-a"></div>
+
+      <div class="item-d">
+        <h2>T-Shirts</h2>
+        <p>Our T-Shirts are made of premium 100% cotton, which allows for breathability. All of the
+          images that are displayed on the shirt are printed in-house.</p>
+      </div>
+
+      <div id="sweatshirts" class="item-b"></div>
+
+      <div class="item-e">
+        <h2>Sweatshirts</h2>
+        <p>Our sweatshirts are hand printed in-house and made of premium cotton-poly mixtures,
+        which allows for breathability and durability in our clothes.</p>
+      </div>
+
+      <div id="varsity-jackets" class="item-c"></div>
+
+      <div class="item-f">
+        <h2>Varsity Jackets</h2>
+        <p>Our varsity jackets are composed of black leather sleeves, with a wool vest component,
+        and we offer custom numbers and letters for the sleeve varsity patches.</p>
+      </div>
+
+    </div>
+
+    <!-- Check Out Button -->
+    <div id=main>
+      <div class="popup_form" id="survey">
+        <form id="survey-form" class="survey_form" action="input.php" >
+          <!-- action tag handles input and sends to input.php file -->
+
+          <h1>Order</h1>
+
+          <select id="dropdown" class="dropdown">
+            <option value="#">T-Shirt</option>
+            <option value="#">Hoodie</option>
+            <option value="#">Varsity Jacket</option>
+          </select>
+
+          <input type="text" placeholder="Full Name" required><br>
+          <input type="email" name="email" id="email" placeholder="Email" required><br>
+          <input class="number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" min="0" max="10" pattern="[0-9\s]{13,19}" required><br>
+
+          <input class="exdate" type="number" maxlength="7" placeholder="mm yyyy" min="0" max="10" pattern="[0-9\s]{6,7}" required><br>
+          <input class="ccv" type="number" maxlength="3" placeholder="xxx" min="0" max="10" required><br>
+
+          <textarea name="comments" placeholder="Order Specifications"></textarea>
+
+          <button type="submit" id="submit" class="btn_submit" value="submit">Submit</button>
+          <button type="submit" class="btn_cancel" onclick="closeform()">Exit</button>
+
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

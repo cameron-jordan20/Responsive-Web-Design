@@ -1,0 +1,116 @@
+body {
+  font-family: serif;
+}
+
+.popup_form .survey_form h1 {
+  text-align: center;
+}
+
+.btn_open {
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.popup_form {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 2px solid black;
+  z-index: 9;
+}
+
+.popup_form .survey_form {
+    max-width: 280px;
+    padding: 10px;
+    background-color: white;
+}
+
+.popup_form .survey_form input[type=text],
+.popup_form .survey_form input[type=email],
+.popup_form .survey_form .number {
+  background: rgb(232, 232, 232);
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+}
+
+.popup_form .survey_form .number {
+  text-align: center;
+}
+
+.popup_form .survey_form input[type=text]:focus,
+.popup_form .survey_form input[type=email]:focus,
+.popup_form .survey_form .number:focus{
+  background-color: rgb(150, 142, 141);
+  outline: none;
+}
+
+.popup_form .survey_form .btn_submit{
+  background-color: rgb(14, 215, 10);
+  color: white;
+  padding: 20px 30px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.popup_form .survey_form .btn_cancel {
+  background-color: red;
+  color: white;
+  padding: 20px 30px;
+  width: 100%;
+  margin-bottom: 10px;
+  border: none;
+}
+
+.popup_form .survey_form .btn_submit:hover,
+.popup_form .survey_form .btn_open:hover {
+  opacity: 0.75;
+}
+
+.popup_form .survey_form .dropdown {
+  width: 100%;
+}
+
+.popup_form .survey_form textarea {
+  width: 100%;
+}
+
+.exdate {
+  float: left;
+  width: 40%;
+  background: rgb(232, 232, 232);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  text-align: center;
+}
+
+.ccv {
+  float: right;
+  width: 40%;
+  background: rgb(232, 232, 232);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  text-align: center;
+}
+
+.exdate:focus,
+.ccv:focus {
+  background-color: rgb(150, 142, 141);
+  outline: none;
+}
+
+#dropdown {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
