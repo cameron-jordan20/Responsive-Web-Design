@@ -1,8 +1,24 @@
 #image {
   width: 100%;
+  position: center;
   height: auto;
-  max-width: 625px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   display: block;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Syne Mono', monospace;
+}
+
+p {
+  font-family: 'Turret Road', cursive;
+  text-align: center;
+  margin: 10px;
+}
+
+.credit {
+  font-size: 12px;
 }
