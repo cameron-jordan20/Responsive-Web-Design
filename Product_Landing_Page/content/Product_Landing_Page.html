@@ -1,3 +1,5 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -21,7 +23,7 @@
       <nav id="nav-bar" class="nav-bar">
         <a href="#t-shirts" class="nav-link">T-Shirts</a>
         <a href="#sweatshirts" class="nav-link">Sweatshirts</a>
-        <a href="#varisty-jackets"class="nav-link">Varsity-Jackets</a>
+        <a href="#varsity-jackets"class="nav-link">Varsity-Jackets</a>
         <a type="submit" onclick="openform()" class="btn_open" class="nav-link"><i class="material-icons">card_travel</i></a>
       </nav>
     </header>
@@ -59,8 +61,7 @@
     <!-- Check Out Button -->
     <div id=main>
       <div class="popup_form" id="survey">
-        <form id="survey-form" class="survey_form" action="input.php" >
-          <!-- action tag handles input and sends to input.php file -->
+        <form id="form" class="survey_form" action="https://www.freecodecamp.com/email-submit" >
 
           <h1>Order</h1>
 
@@ -79,7 +80,7 @@
 
           <textarea name="comments" placeholder="Order Specifications"></textarea>
 
-          <button type="submit" id="submit" class="btn_submit" value="submit">Submit</button>
+          <input type="submit" id="submit" class="btn_submit" value="submit">Submit</input>
           <button type="submit" class="btn_cancel" onclick="closeform()">Exit</button>
 
         </form>
