@@ -5,8 +5,6 @@
   width: 100%;
   top: 0;
   left: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 .nav-bar a {
@@ -15,8 +13,9 @@
   text-align: center;
   text-decoration: none;
   font-size: 16px;
+  padding-top: 12px;
+  height: 40px;
   width: 50%;
-  margin: 20px 0 20px;
 }
 
 .nav-bar a:hover {
@@ -96,27 +95,40 @@ h2 {
 }
 
 .pt1 {
-  grid-area: left;
+  /* grid-area: left; */
+  align-items: flex-start;
 }
 
 .pt2 {
-  grid-area: right;
+  /* grid-area: right; */
+  align-items: flex-end;
 }
 
 .projects {
-  /*background-color: #C19E6B;*/
+  background-color: #C19E6B;
   margin: 20px 20px 60px;
-  display: grid;
+  /* display: grid;
   grid-gap: 20px;
   grid-template-columns: 50% 50%;
   grid-template-rows: 200px 200px;
   grid-template-areas:
-    "left right";
+    "left right"; */
+  padding-bottom: 40px;
 }
 
 .welcome-section {
-  height: 100vh;
-  display: block;
-  height: 100vh;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 50vh;
   background-color: #FAE7B1;
+}
+
+.welcome-section .about-me {
+  width: 50%;
+}
+
+.welcome-section .currently {
+  width: 50%;
+  margin-left: 50%;
 }
